@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Giga Product 1",
+        "category": "category",
+        "tags": ["tag1", "tag2"]
+    },
+    {
+        "title": "BMW228",
+        "category": "cars",
+        "tags": ["noblinkers", "eu"]
+    },
+    {
+        "title": "Router123",
+        "category": "category",
+        "tags": ["ethernet", "speed"]
+    },
+    {
+        "title": "PencilUSBDrive-131313",
+        "category": "category",
+        "tags": ["school", "hacker"]
+    }
+]
