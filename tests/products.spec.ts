@@ -53,3 +53,12 @@ test('Delete a product', async({ request }) => {
     expect(body.isDeleted).toBe(true);
     console.log(body.isDeleted);
 });
+
+test('Update a product', async({ request }) => {
+    const client = new ApiClient(request);
+    const response = await client.put(ENDPOINTS.products.update(31), {'title': 'TestUpdate1234'});
+
+    expect(response.status()).toBe(200);
+    const body = await response.json() as Product;
+    expect(body.title).toContain('1234');
+});
