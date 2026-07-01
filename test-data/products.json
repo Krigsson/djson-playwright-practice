@@ -1,22 +1,38 @@
 [
     {
+        "id": 23,
         "title": "Giga Product 1",
         "category": "category",
-        "tags": ["tag1", "tag2"]
+        "tags": [
+            "tag1",
+            "tag2"
+        ]
     },
     {
+        "id": 265,
         "title": "BMW228",
         "category": "cars",
-        "tags": ["noblinkers", "eu"]
+        "tags": [
+            "noblinkers",
+            "eu"
+        ]
     },
     {
+        "id": 341,
         "title": "Router123",
         "category": "category",
-        "tags": ["ethernet", "speed"]
+        "tags": [
+            "ethernet",
+            "speed"
+        ]
     },
     {
+        "id": 1,
         "title": "PencilUSBDrive-131313",
         "category": "category",
-        "tags": ["school", "hacker"]
+        "tags": [
+            "school",
+            "hacker"
+        ]
     }
 ]

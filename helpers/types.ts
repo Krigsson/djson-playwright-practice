@@ -3,6 +3,7 @@ export interface Product {
     price:      number;
     title:      string;
     category:   string;
+    isDeleted:  boolean;
 }
 
 export interface ProductsResponse {

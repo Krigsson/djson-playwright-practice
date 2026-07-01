@@ -42,3 +42,14 @@ for (const {title, category, tags} of productData) {
         expect(body.title).toContain(title);
     });
 }
+
+test('Delete a product', async({ request }) => {
+    const client = new ApiClient(request);
+    const response = await client.delete(ENDPOINTS.products.delete(24));
+
+    expect(response.status()).toBe(200);
+    const body = await response.json() as Product;
+    expect(body.isDeleted).toBeDefined();
+    expect(body.isDeleted).toBe(true);
+    console.log(body.isDeleted);
+});
