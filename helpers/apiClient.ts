@@ -1,16 +1,15 @@
-import { APIRequestContext, expect } from '@playwright/test';
+import { APIRequestContext, APIResponse } from '@playwright/test';
 
 export class ApiClient {
     constructor(private request: APIRequestContext) {}
 
-    async get<T>(endpoint: string): Promise<T> {
+    async get(endpoint: string): Promise<APIResponse> {
         const response = await this.request.get(endpoint);
-        expect(response.ok()).toBeTruthy();
-        return await response.json();
+        return await this.request.get(endpoint);
     }
 
-    async post<T>(endpoint: string, body: object): Promise<T> {
+    async post(endpoint: string, body: object): Promise<APIResponse> {
         const response = await this.request.post(endpoint, { data: body });
-        return await response.json();
+        return await this.request.post(endpoint, {data: body});
     }
 }
