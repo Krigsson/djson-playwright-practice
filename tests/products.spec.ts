@@ -33,7 +33,7 @@ test('Non-existant product', async({ request }) => {
 for (const {title, category, tags} of productData) {
     test(`Adding new product ${title}`, async({ request }) => {
         const client = new ApiClient(request);
-        const response = await client.post(ENDPOINTS.products.add, {'title': title, 'category': category, 'tags': tags});
+        const response = await client.post(ENDPOINTS.products.add, { body: { 'title': title, 'category': category, 'tags': tags } });
 
         expect(response.status()).toBe(201);
         const body = await response.json() as Product;    
@@ -51,7 +51,6 @@ test('Delete a product', async({ request }) => {
     const body = await response.json() as Product;
     expect(body.isDeleted).toBeDefined();
     expect(body.isDeleted).toBe(true);
-    console.log(body.isDeleted);
 });
 
 test('Update a product', async({ request }) => {

@@ -8,7 +8,7 @@ import invalidLoginData from '../test-data/users/invalid-users.json';
 for (const { username, password } of correctLoginData) {
     test(`Test login for valid {${username}} : {${password}} set`, async ({ request }) => {
         const client = new ApiClient(request);
-        const response = await client.post(ENDPOINTS.auth.login, { 'username': username, 'password': password });
+        const response = await client.post(ENDPOINTS.auth.login, { body: { 'username': username, 'password': password } });
 
         expect(response.status()).toBe(200);
         const body = await response.json() as User;
@@ -21,7 +21,7 @@ for (const { username, password } of correctLoginData) {
 for (const { username, password, errorMessage } of invalidLoginData) {
     test(`Test login for invalid {${username}} : {${password}} set`, async ({ request }) => {
         const client = new ApiClient(request);
-        const response = await client.post(ENDPOINTS.auth.login, { 'username': username, 'password': password});
+        const response = await client.post(ENDPOINTS.auth.login, { body: { 'username': username, 'password': password } });
 
         expect(response.status()).toBe(400);
         const body = await response.json();
@@ -29,3 +29,19 @@ for (const { username, password, errorMessage } of invalidLoginData) {
         expect(body["message"]).toContain(errorMessage);
     });
 }
+
+for (const { username, bearerToken } of correctLoginData) {
+    test(`Login with bearerToken for ${username}`, async ({ request }) => {
+        const client = new ApiClient(request);
+        const response = await client.get(ENDPOINTS.auth.me,
+            {
+                body: { 'credentials': 'include' },
+                headers: { 'Authorization': `Bearer ${bearerToken}` }
+            });
+
+        expect(response.status()).toBe(200);
+        const body = await response.json() as User;
+        expect(body.username).toContain(username);
+    });
+}
+
