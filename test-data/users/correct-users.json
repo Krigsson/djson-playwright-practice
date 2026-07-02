@@ -1,22 +1,18 @@
 [
     {
         "username": "emilys",
-        "password": "emilyspass",
-        "bearerToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3ODMwMDIzNjAsImV4cCI6MTc4MzAwNTk2MH0.2T3LawgKLnQAs9QySPdrPKw_T75Cxb_npHuYW2ErlpU"
+        "password": "emilyspass"
     },
     {
         "username": "michaelw",
-        "password": "michaelwpass",
-        "bearerToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJtaWNoYWVsdyIsImVtYWlsIjoibWljaGFlbC53aWxsaWFtc0B4LmR1bW15anNvbi5jb20iLCJmaXJzdE5hbWUiOiJNaWNoYWVsIiwibGFzdE5hbWUiOiJXaWxsaWFtcyIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL21pY2hhZWx3LzEyOCIsImlhdCI6MTc4MzAwMzU0OCwiZXhwIjoxNzgzMDA3MTQ4fQ.Hto5_-OmIXFVlsmG1njxUMJzEGp6Dhd8aK1jiRJfus8"
+        "password": "michaelwpass"
     },
     {
         "username": "alexanderj",
-        "password": "alexanderjpass",
-        "bearerToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywidXNlcm5hbWUiOiJhbGV4YW5kZXJqIiwiZW1haWwiOiJhbGV4YW5kZXIuam9uZXNAeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiQWxleGFuZGVyIiwibGFzdE5hbWUiOiJKb25lcyIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2FsZXhhbmRlcmovMTI4IiwiaWF0IjoxNzgzMDAzNTQ4LCJleHAiOjE3ODMwMDcxNDh9.MeB6NOh7lvzq0tcM0Ko92LaDhsmEY1OQYesyMpuEpks"
+        "password": "alexanderjpass"
     },
     {
         "username": "ethanm",
-        "password": "ethanmpass",
-        "bearerToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwidXNlcm5hbWUiOiJldGhhbm0iLCJlbWFpbCI6ImV0aGFuLm1hcnRpbmV6QHguZHVtbXlqc29uLmNvbSIsImZpcnN0TmFtZSI6IkV0aGFuIiwibGFzdE5hbWUiOiJNYXJ0aW5leiIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2V0aGFubS8xMjgiLCJpYXQiOjE3ODMwMDM1NDgsImV4cCI6MTc4MzAwNzE0OH0.cPSko3ZWMrQJWINOSITnVQVXa-6hP9B7LuXPRvpEKrs"
+        "password": "ethanmpass"
     }
 ]

@@ -30,14 +30,19 @@ for (const { username, password, errorMessage } of invalidLoginData) {
     });
 }
 
-for (const { username, bearerToken } of correctLoginData) {
+for (const { username, password } of correctLoginData) {
     test(`Login with bearerToken for ${username}`, async ({ request }) => {
         const client = new ApiClient(request);
-        const response = await client.get(ENDPOINTS.auth.me,
-            {
-                body: { 'credentials': 'include' },
-                headers: { 'Authorization': `Bearer ${bearerToken}` }
-            });
+        
+        const loginResponse = await client.post(ENDPOINTS.auth.login, 
+            {body: { 'username': username, 'password': password}}
+        );
+        
+        const { accessToken } = await loginResponse.json();
+        
+        const response = await client.get(ENDPOINTS.auth.me, 
+            { headers: { 'Authorization': `Bearer ${ accessToken }` }
+        });
 
         expect(response.status()).toBe(200);
         const body = await response.json() as User;
@@ -49,7 +54,6 @@ test('Login without Bearer token', async ({ request }) => {
     const client = new ApiClient(request);
     const response = await client.get(ENDPOINTS.auth.me,
         {
-            body: { 'credentials': 'include' },
             headers: { 'Authorization': '' }
         });
 
@@ -63,7 +67,6 @@ for (const { bearerToken } of invalidLoginData) {
         const client = new ApiClient(request);
         const response = await client.get(ENDPOINTS.auth.me,
             {
-                body: { 'credentials': 'include' },
                 headers: { 'Authorization': `Bearer ${bearerToken}` }
             });
 
