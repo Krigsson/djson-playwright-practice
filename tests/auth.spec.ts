@@ -25,8 +25,8 @@ for (const { username, password, errorMessage } of invalidLoginData) {
 
         expect(response.status()).toBe(400);
         const body = await response.json();
-        expect(body["message"]).toBeDefined();
-        expect(body["message"]).toContain(errorMessage);
+        expect(body.message).toBeDefined();
+        expect(body.message).toContain(errorMessage);
     });
 }
 
@@ -59,7 +59,7 @@ test('Login without Bearer token', async ({ request }) => {
 
     expect(response.status()).toBe(401);
     const body = await response.json();
-    expect(body["message"]).toContain('Access Token is required');
+    expect(body.message).toContain('Access Token is required');
 });
 
 for (const { bearerToken } of invalidLoginData) {
@@ -72,7 +72,7 @@ for (const { bearerToken } of invalidLoginData) {
 
         expect(response.status()).toBe(401);
         const body = await response.json();
-        expect(body['message']).toContain('Invalid/Expired Token!');
+        expect(body.message).toContain('Invalid/Expired Token!');
     });
 }
 
