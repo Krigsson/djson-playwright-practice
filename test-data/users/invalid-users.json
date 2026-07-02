@@ -1,0 +1,22 @@
+[
+    {
+        "username": "123",
+        "password": "emilys12421pass",
+        "errorMessage": "Invalid credentials"
+    },
+    {
+        "username": "michaqqfqefeqelw",
+        "password": "michaelgergagewpass",
+        "errorMessage": "Invalid credentials"
+    },
+    {
+        "username": "",
+        "password": "",
+        "errorMessage": "Username and password required"
+    },
+    {
+        "username": "ethqefefea2222222222200000anm",
+        "password": "                        ethanmpass                      ",
+        "errorMessage": "Invalid credentials"
+    }
+]
