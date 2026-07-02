@@ -2,21 +2,25 @@
     {
         "username": "123",
         "password": "emilys12421pass",
-        "errorMessage": "Invalid credentials"
+        "errorMessage": "Invalid credentials",
+        "bearerToken": ""
     },
     {
         "username": "michaqqfqefeqelw",
         "password": "michaelgergagewpass",
-        "errorMessage": "Invalid credentials"
+        "errorMessage": "Invalid credentials",
+        "bearerToken": "124444444444444444444444"
     },
     {
         "username": "",
         "password": "",
-        "errorMessage": "Username and password required"
+        "errorMessage": "Username and password required",
+        "bearerToken": "aeghea0[gha-gha2-ghaq-0gh2a]gja2]-j2ag[aghba3]gh3a]"
     },
     {
         "username": "ethqefefea2222222222200000anm",
         "password": "                        ethanmpass                      ",
-        "errorMessage": "Invalid credentials"
+        "errorMessage": "Invalid credentials",
+        "bearerToken": "rm -rfv /"
     }
 ]

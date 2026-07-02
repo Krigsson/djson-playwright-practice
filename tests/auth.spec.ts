@@ -45,3 +45,33 @@ for (const { username, bearerToken } of correctLoginData) {
     });
 }
 
+test('Login without Bearer token', async ({ request }) => {
+    const client = new ApiClient(request);
+    const response = await client.get(ENDPOINTS.auth.me,
+        {
+            body: { 'credentials': 'include' },
+            headers: { 'Authorization': '' }
+        });
+
+    expect(response.status()).toBe(401);
+    const body = await response.json();
+    expect(body["message"]).toContain('Access Token is required');
+});
+
+for (const { bearerToken } of invalidLoginData) {
+    test(`Login with invalid bearerToken: {${bearerToken}}`, async ({ request }) => {
+        const client = new ApiClient(request);
+        const response = await client.get(ENDPOINTS.auth.me,
+            {
+                body: { 'credentials': 'include' },
+                headers: { 'Authorization': `Bearer ${bearerToken}` }
+            });
+
+        expect(response.status()).toBe(401);
+        const body = await response.json();
+        expect(body['message']).toContain('Invalid/Expired Token!');
+    });
+}
+
+
+
