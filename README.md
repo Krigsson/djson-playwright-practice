@@ -10,6 +10,7 @@ Automated API test suite for [DummyJSON](https://dummyjson.com/) built with Play
 - GitHub Actions (CI)
 
 ## Project Structure
+```
 ├── tests/
 │   ├── auth.spec.ts        # Authentication tests
 │   └── products.spec.ts    # Products CRUD tests
@@ -22,23 +23,24 @@ Automated API test suite for [DummyJSON](https://dummyjson.com/) built with Play
 │   └── users/
 │       ├── correct-users.json
 │       └── invalid-users.json
+```
 
 ## What is tested
 
 **Authentication (`auth.spec.ts`)**
-- Login with valid credentials
-- Login with invalid credentials
-- Access protected endpoint with valid Bearer token
-- Access protected endpoint without token
-- Access protected endpoint with invalid/expired token
+- Login with valid credentials;
+- Login with invalid credentials;
+- Access protected endpoint with valid Bearer token;
+- Access protected endpoint without token;
+- Access protected endpoint with invalid/expired token.
 
 **Products (`products.spec.ts`)**
-- GET all products
-- GET single product by ID
-- GET non-existent product (404)
-- POST new product
-- PUT update existing product
-- DELETE product
+- GET all products;
+- GET single product by ID;
+- GET non-existent product (404);
+- POST new product;
+- PUT update existing product;
+- DELETE product.
 
 ## How to Run
 
